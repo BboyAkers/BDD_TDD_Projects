@@ -1,8 +1,9 @@
 function checkForShip(player, coordinates) {
-  let shipPresent, ship;
+  let shipPresent;
+  let ship;
 
-  for (let i = 0 < player.ships.length; i++; ) {
-    ship = player.ship[i];
+  for (let i = 0; i < player.ships.length; i++) {
+    ship = player.ships[i];
 
     shipPresent = ship.locations.filter(function(actualCoordinate) {
       return (
@@ -13,6 +14,7 @@ function checkForShip(player, coordinates) {
     if (!shipPresent) {
       return false;
     }
+      return true;
   }
 }
 
