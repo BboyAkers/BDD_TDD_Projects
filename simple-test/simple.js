@@ -1,12 +1,10 @@
 const sum = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 
-let result;
-let expected;
 
 test('sum adds two numbers', () => {
   const result = sum(3, 7);
-  const expected = 4;
+  const expected = 10;
   expect(result).toBe(expected);
 });
 
@@ -29,8 +27,8 @@ function test(title, callback) {
 function expect(actual) {
   return {
     toBe(expected) {
-      if (result !== expected) {
-        throw new Error(`Expected ${expected}, got ${result}`);
+      if (actual !== expected) {
+        throw new Error(`Expected ${expected}, got ${actual}`);
       }
     },
   }
